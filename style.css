@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0B2434;
+    padding: 20px;
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    background-color: #F5F5F5;
+    height: 400px;
+    max-width: 800px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.die-face {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+    padding: 5px;
+    transition: transform .35s ease-in-out;
+}
+
+.die-face.roll {
+    transform: rotate(2turns)
+}
+
+.face1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face2 {
+    display: flex;
+    justify-content : space-between;
+}
+
+.face2 .dot:nth-of-type(2) {
+align-self: flex-end;
+}
+
+.face3 {
+   display: flex;
+   justify-content : space-between;
+}
+
+.face3 .dot:nth-of-type(2) {
+    align-self: center;
+}
+
+.face3 .dot:nth-of-type(1) {
+align-self :flex-end;
+}
+
+.face4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.face4 .dot:nth-of-type(1) {
+    margin: 0 18px 18px 0;
+}
+
+.face4 .dot:nth-of-type(3) {
+    margin: 0 18px 0 0;
+}
+
+.face5 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.face5 .dot:nth-of-type(1) {
+    margin: 0 18px 4px 0;
+}
+
+.face5 .dot:nth-of-type(3) {
+    margin: 0 4px 4px 15px;
+}
+
+.face5 .dot:nth-of-type(4) {
+    margin: 0 18px 0 0;
+}
+
+.face6 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.face6 .dot:nth-of-type(1) {
+    margin: 0 18px 4px 0;
+}
+
+.face6 .dot:nth-of-type(3) {
+    margin: 0 18px 4px 0;
+}
+
+.face6 .dot:nth-of-type(5) {
+    margin: 0 18px 0 0;
+}
+
+.dot {
+   display: block;
+   width: 11px;
+   height: 11px;
+   border-radius: 50%;
+   background-color: black;
+}
+
+.die-num {
+    font-size: 2rem;
+}
+
+.roll-dice {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+}
+
+.roll-dice:focus {
+    outline: none;
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.roll-counter {
+  transition: transform .35s ease-in-out;
+  line-height: 1rem;
+}
+
+.roll-counter.grow {
+  transform: scale(2) rotate(1turn);
+
+}
